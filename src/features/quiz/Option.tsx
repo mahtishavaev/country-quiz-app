@@ -23,6 +23,9 @@ const IncorrectOptionIcon = styled.span.attrs({
 
 const CountryName = styled.span`
   margin: 0 30px;
+  @media (max-width: 575.98px) {
+    margin: 0 20px;
+  }
 `;
 
 type DefaultOptionType = { disabled: boolean };
