@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import { Quiz } from "./features/quiz/Quiz";
 
-function App() {
+const Container = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: url("/assets/background.png") center/ cover fixed;
+  font-family: "Poppins", sans-serif;
+  @media (max-width: 575.98px) {
+    padding-top: 20px;
+  }
+`;
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Quiz />
+    </Container>
   );
-}
-
-export default App;
+};
